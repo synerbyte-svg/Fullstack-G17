@@ -269,11 +269,19 @@
                         <label for="pais">Pais</label><br/>
                         <select name="pais" id="pais" required>
                             <option value="">-Elige un pais-</option>
-                            <option value="pe">Peru</option>
-                            <option value="co">Colombia</option>
-                            <option value="mx">Mexico</option>
-                            <option value="ar">Argentina</option>
-                            <option value="es">Espana</option>
+                            <optgroup label="Sudamerica">
+                                <option value="pe">Peru</option>
+                                <option value="co">Colombia</option>
+                                <option value="ar">Argentina</option>
+                            </optgroup>
+
+                            <optgroup label="Norteamerica">
+                                <option value="mx">Mexico</option>
+                            </optgroup>
+
+                            <optgroup label="Europa">
+                                <option value="es">Espana</option>
+                            </optgroup>
                         </select>
                     </p>
                     <p>
@@ -291,6 +299,42 @@
                     <p>
                         <label for="notas">Notas para el repartidor (opcinal)</label>
                         <textarea name="notas" id="notas" rows="5" maxlength="200"></textarea>
+                    </p>
+                </fieldset>
+                <!-- TAREA 4 D1 -->
+                <fieldset>
+                    <legend>Datos de facturacion</legend>
+
+                    <p>
+                        <label for="tipo-comprobante">Tipo de comprobante</label><br/>
+                        <select id="tipo-comprobante" name="tipo-comprobante" required>
+                            <option value="">-Elige un comprobante-</option>
+                            <option value="boleta">Boleta</option>
+                            <option value="factura">Factura</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="ruc">RUC</label><br/>
+                        <input
+                            type="text"
+                            id="ruc"
+                            name="ruc"
+                            pattern="[0-9]{11}"
+                            title="El RUC debe tener 11 digitos"
+                            minlength="11"
+                            maxlength="11"
+                        />
+                    </p>
+
+                    <p>
+                        <label for="empresa">Razon social</label><br/>
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            minlength="3"
+                        />
                     </p>
                 </fieldset>
                 <fieldset>
