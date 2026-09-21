@@ -8,7 +8,7 @@ body {
     background-color: #f5f5f7;
 
 }
-h1 { color: #0066cc; font-size: 2rem;}
+h1 { color: #0d6efd; font-size: 2rem;}
 h2{ font-size: 1.5rem;}
 h3{font-size: 1.125rem;}
 h1,h2,h3 {line-height: 1.2;} 
@@ -20,10 +20,10 @@ figcaption{
     letter-spacing: 0.04em;
 }
 article{text-align: center; background-color: #fff;}
-a {color: #0066cc;}
+a {color: #0d6efd;}
 strong {color : hsl(146 85% 26%);}
 button{
-    background-color: #0066cc;
+    background-color: #0d6efd;
     color: #fff;
     cursor: pointer;
 }
@@ -37,3 +37,70 @@ nav > ul {list-style: none;}
 nav a {text-decoration: none; font-weight: 600;}
 /* ATRIBUTO */
 button[type="submit"]{background-color: hsl(146 85% 26%); font-size: 1.125rem;}
+/* TAREA 2 - I1 */
+
+/* Costos a la derecha */
+table td:last-child {
+    text-align: right;
+}
+
+/* Primera fila (Lima) en negrita */
+table tbody tr:first-child {
+    font-weight: bold;
+}
+
+/* Posición del título de la tabla */
+table caption {
+    caption-side: bottom;
+}
+/* TAREA 3 - I2 */
+
+/* Labels de los campos en bloque */
+form label {
+    display: block;
+}
+
+/* Radio y checkbox permanecen junto a su label */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+}
+
+/* Textarea solo puede cambiar de tamaño verticalmente */
+textarea {
+    resize: vertical;
+}
+/* TAREA 4 - D1 */
+
+/* Sombra y transición para las tarjetas */
+article {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Al pasar el mouse, la tarjeta sube 4px */
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+/* La tarjeta destacada no se eleva */
+article.destacado:hover {
+    transform: none;
+}
+/* TAREA 2 - D2 */
+
+/* Especificidad: 0-0-1 */
+h3 {
+    color: red;
+}
+
+/* Especificidad: 0-1-0 */
+.titulo {
+    color: blue;
+}
+
+/* Especificidad: 1-0-1 */
+:where(#catalogo) h3 {
+    color: green;
+}
