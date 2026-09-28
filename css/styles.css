@@ -404,3 +404,11 @@ footer{grid-area: pie;}
         max-width: 1280px;
     }
 }
+.categorias ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
