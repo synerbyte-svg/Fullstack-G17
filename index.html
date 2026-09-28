@@ -18,8 +18,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#compra">
+                    <a href="#compra" class="carrito">
                         Comprar
+                        <span class="contador">0</span>
                     </a>
                 </li>
             </ul>
@@ -107,6 +108,7 @@
                         <label for="direccion">Direccion</label><br/>
                         <input type="text" id="direccion" name="direccion" required minlength="5" autocomplete="address-line1">
                     </p>
+
                     <div class="fila">
                     <p>
                         <label for="ciudad">Ciudad</label><br/>
@@ -120,7 +122,7 @@
                             <option value="Madrid"></option>
                         </datalist>
                     </p>
-
+                    <!-- TAREA 3 I2 -->
                     <p>
                         <label for="pais">Pais</label><br/>
                         <select name="pais" id="pais" required>

@@ -416,7 +416,23 @@ footer{grid-area: pie;}
     display: flex;
     gap: 16px;
 }
-
 .fila p {
     flex: 1;
+}
+/* TAREA D1 - Botón de carrito */
+.carrito {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contador {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
 }
