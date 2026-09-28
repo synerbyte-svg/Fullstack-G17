@@ -329,7 +329,7 @@ figure{
 footer {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     margin-top: 2rem;
     padding: 1.5rem 0;
@@ -343,9 +343,10 @@ footer address {
     margin: 0;
 }
 footer address{
-    order: -1;
-    margin-right: auto;
     font-style: normal;
+}
+.footer-columna {
+    flex: 1 1 200px;
 }
 .productos{
     display: grid;
