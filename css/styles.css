@@ -412,3 +412,11 @@ footer{grid-area: pie;}
     list-style: none;
     padding: 0;
 }
+.fila {
+    display: flex;
+    gap: 16px;
+}
+
+.fila p {
+    flex: 1;
+}
