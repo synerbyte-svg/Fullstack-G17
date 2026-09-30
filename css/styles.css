@@ -110,11 +110,11 @@ body {
     padding: var(--espacio);
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 
-        "cabecera"
-        "lateral"
-        "contenido"
-        "pie";
+    grid-template-areas:
+        "cabecera cabecera"
+        "promo promo"
+        "contenido lateral"
+        "pie pie";
     grid-auto-rows: auto auto 1fr auto;
     gap: 24px;
     min-height: 100vh;
@@ -327,7 +327,8 @@ figure{
     margin-top: 16px;
 }
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 16px;
@@ -394,7 +395,7 @@ footer{grid-area: pie;}
 @media(min-width : 64em) {
     body {
         display: grid;
-        grid-template-columns: 300px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) 300px;
         grid-template-areas:
             "cabecera"
             "promo"
@@ -446,4 +447,9 @@ footer{grid-area: pie;}
 }
 .promo {
     grid-area: promo;
+}
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
 }
