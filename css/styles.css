@@ -353,6 +353,7 @@ footer address{
     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
     /* primero filas / columnas */
     gap: 24px 16px;
+    grid-auto-flow: dense;
 }
 header{grid-area: cabecera;}
 main{grid-area: contenido;}
@@ -436,4 +437,7 @@ footer{grid-area: pie;}
     border-radius: 50%;
     background-color: #2563eb;
     color: white;
+}
+.segunda {
+    grid-column: span 2;
 }
