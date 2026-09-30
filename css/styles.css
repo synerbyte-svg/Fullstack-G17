@@ -389,7 +389,12 @@ footer{grid-area: pie;}
         grid-row: span 2;
     }
     .envio {
-        grid-template-columns: 1fr 1fr;
+    grid-row: 1 / 3;
+    }
+
+    form > button[type="submit"] {
+        grid-column: 1 / -1;
+        justify-self: start;
     }
 }
 @media(min-width : 64em) {
@@ -397,12 +402,15 @@ footer{grid-area: pie;}
         display: grid;
         grid-template-columns: minmax(0, 1fr) 300px;
         grid-template-areas:
-            "cabecera"
-            "promo"
-            "lateral"
-            "contenido"
-            "pie";
+            "cabecera cabecera"
+            "promo promo"
+            "contenido lateral"
+            "pie pie";
         gap: 24px;
+    }
+
+    aside {
+        margin-top: 110px;
     }
 }
 @media (min-width: 75em) {
@@ -449,7 +457,32 @@ footer{grid-area: pie;}
     grid-area: promo;
 }
 @media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cabecera"
+            "promo"
+            "contenido"
+            "lateral"
+            "pie";
+    }
+    form {
+        grid-template-columns: 1fr;
+    }
+    .envio {
+        grid-row: auto;
+    }
+    form > button[type="submit"] {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
     footer {
         grid-template-columns: 1fr;
     }
+
+}
+form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
 }
