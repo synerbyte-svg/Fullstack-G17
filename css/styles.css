@@ -393,12 +393,15 @@ footer{grid-area: pie;}
 }
 @media(min-width : 64em) {
     body {
+        display: grid;
         grid-template-columns: 300px minmax(0, 1fr);
-        grid-template-areas: 
-        "cabecera cabecera"
-        "lateral contenido"
-        "pie pie";
-        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "cabecera"
+            "promo"
+            "lateral"
+            "contenido"
+            "pie";
+        gap: 24px;
     }
 }
 @media (min-width: 75em) {
@@ -440,4 +443,7 @@ footer{grid-area: pie;}
 }
 .segunda {
     grid-column: span 2;
+}
+.promo {
+    grid-area: promo;
 }
